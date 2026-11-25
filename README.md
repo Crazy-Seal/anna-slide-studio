@@ -5,6 +5,17 @@
 先出大纲，你确认了再写正文；全程两次模型调用，导出的是真正的 PowerPoint 文件，
 不是图片、不是 PDF。
 
+## 交付信息
+
+| 项 | 值 |
+|---|---|
+| 仓库 | <https://github.com/Crazy-Seal/anna-slide-studio> |
+| App 名称 | 幻灯片工坊 |
+| Slug | `slide-studio` |
+| 完整标识 | `@crazyseal/slide-studio` |
+| 平台 | <https://staging.anna.partners> |
+| 截图 | `docs/screenshots/`（6 张，商店直接用 raw URL） |
+
 ---
 
 ## 现在做到哪了（M0 完成）
