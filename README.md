@@ -16,6 +16,23 @@
 | 平台 | <https://staging.anna.partners> |
 | 截图 | `docs/screenshots/`（6 张，商店直接用 raw URL） |
 
+## 这个 App 用了 Anna 的哪些能力
+
+产品内部**不接任何第三方模型 API**，全部经由 Anna Host API：
+
+| 平台能力 | 用在哪 | 说明 |
+|---|---|---|
+| `llm.complete` | 生成大纲、生成正文、重写单页 | 指定 `qwen3.8-flash`；`modelPreferences.hints[0].name` 已实测生效 |
+| `llm.catalog` | 读 `quota.remainingCU` | 界面右上角实时显示剩余额度 |
+| `files.upload_init` / `upload_finalize` | 保存 .pptx | 浏览器直传 R2，宿主签发的预签名地址 |
+| `files.download` | 让用户保存文件 | 宿主代下载，不依赖 iframe 的 sandbox 权限 |
+| `window.set_title` | 设置窗口标题 | — |
+| `system_prompt_addendum` | 聊天里 `#幻灯片工坊` 时可被主助手召唤 | manifest 里声明 |
+
+一次完整生成 = **2 次模型调用**，8 页 deck 实测 **0.70 CU**（`_meta.quotaConsumed` 读回的真实值，
+不是估算）。平台默认模型是 `claude-sonnet-4.5`（同规模约 34.7 CU），显式指定
+`qwen3.8-flash` 后便宜约 50 倍——这是额度评分下的主动取舍。
+
 ---
 
 ## 现在做到哪了（M0 完成）
