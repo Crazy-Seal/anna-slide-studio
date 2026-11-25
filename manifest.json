@@ -1,0 +1,30 @@
+{
+  "schema": 4,
+  "system_prompt_addendum": "当用户想要做幻灯片 / PPT / 汇报材料时，调用 open_app_view 打开这个 App 的 studio 视图，并把用户的原话放进 payload.topic 传入。不要在聊天里直接撰写幻灯片内容——那是 App 的职责。如果用户只是随口提到 PPT 而没有明确要做，先问一句再打开。",
+  "ui": {
+    "bundle": {
+      "format": "static-spa",
+      "entry": "index.html",
+      "external_origins": []
+    },
+    "views": [
+      {
+        "name": "studio",
+        "title": "幻灯片工坊",
+        "default": true,
+        "min_size": { "w": 380, "h": 420 },
+        "default_size": { "w": 1100, "h": 720 },
+        "max_size": { "w": 1600, "h": 1000 },
+        "single_instance": true,
+        "summary_template": "幻灯片：{topic}"
+      }
+    ],
+    "csp_overrides": {},
+    "state_merge": "last_writer_wins"
+  },
+  "dev": {
+    "fixtures": ["fixtures/*.jsonl"],
+    "seed_storage": {},
+    "user_id": 1
+  }
+}

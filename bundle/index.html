@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>幻灯片工坊</title>
+<link rel="stylesheet" href="./css/theme.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">幻灯片工坊</span>
+    </div>
+    <div class="topbar-right">
+      <span class="quota" id="quota" hidden></span>
+      <button class="btn-ghost" id="btn-reset" hidden>重来</button>
+    </div>
+  </header>
+
+  <main class="stage" id="stage"></main>
+
+  <div class="toast" id="toast" hidden></div>
+</div>
+
+<!-- CSP: script-src 'self'，禁止内联脚本；逻辑全部在外部模块里 -->
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>

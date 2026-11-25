@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <!-- 深底色：平台上会被裁成方形，所以整幅铺满 -->
+  <rect width="1024" height="1024" fill="#12141A"/>
+
+  <g transform="translate(512 512) rotate(-8)">
+    <!-- 投影 -->
+    <rect x="-300" y="-152" width="600" height="340" rx="34"
+          fill="#000000" opacity="0.45" filter="url(#soft)"/>
+
+    <!-- 幻灯片本体 -->
+    <rect x="-300" y="-170" width="600" height="340" rx="34" fill="#FAF9F7"/>
+
+    <!-- 内容示意：一条标题 + 一条强调 -->
+    <rect x="-228" y="-98" width="336" height="40" rx="9" fill="#1A1D24"/>
+    <rect x="-228" y="-28" width="196" height="40" rx="9" fill="#2563EB"/>
+  </g>
+</svg>

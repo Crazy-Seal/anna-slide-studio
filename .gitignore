@@ -1,0 +1,15 @@
+# 依赖与缓存：不进仓库
+node_modules/
+.uv-cache/
+
+# Anna CLI 的本地身份缓存（含 handle / app 引用）
+.anna/
+
+# 本地验证产物（截图、试导出的 pptx、解包目录）
+.shots/
+
+# 本地日志与临时文件
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
